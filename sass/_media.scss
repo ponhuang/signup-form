@@ -1,0 +1,35 @@
+/*---------- max-width: 1260px ----------*/
+
+@media (max-width: 78.75em) {
+  html {
+    font-size: 56.25%; // 1rem =9px
+  }
+  main {
+    flex-direction: column;
+    padding: 8.8rem 2.4rem 4rem 2.4rem;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  input {
+    padding-left: 1.8rem;
+  }
+
+  .input-box {
+    .error-icon {
+      margin-left: -4rem;
+    }
+  }
+}
+
+/*---------- max-width: 600px ----------*/
+
+@media (max-width: 37.5em) {
+  .header {
+    h1 {
+      font-size: 2.8rem;
+    }
+  }
+}
