@@ -65,14 +65,14 @@ main {
     #form input:focus {
       border-color: #3e3c49;
       font-weight: 600; }
-    #form input:invalid {
-      border-color: #ff7a7a;
-      color: #ff7a7a; }
+    #form input.invalid {
+      border-color: #ff7a7a; }
 
 .input-container {
   display: flex;
   flex-direction: column;
-  align-items: end; }
+  align-items: end;
+  margin-bottom: 2rem; }
 
 .input-box {
   display: flex;
