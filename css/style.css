@@ -55,7 +55,6 @@ main {
     display: block;
     width: 100%;
     height: 5.6rem;
-    margin-bottom: 0.6rem;
     padding-left: 2.5rem;
     font-family: inherit;
     border: 1px solid #b9b6d3;
@@ -89,7 +88,7 @@ main {
 .error-message {
   font-size: 1.1rem;
   color: #ff7a7a;
-  margin-bottom: 2rem; }
+  margin-top: 0.5rem; }
   .error-message.hidden {
     display: none; }
 

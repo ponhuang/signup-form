@@ -16,8 +16,6 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -38,6 +36,9 @@ Desktop
 Mobile
 ![](screenshot/mobile.png)
 
+Error Message and Icon
+![](screenshot/error.png)
+
 ### Links
 
 - [Solution URL here](https://github.com/ponhuang/signup-form)
@@ -55,9 +56,19 @@ Mobile
 
 ### What I learned
 
-### Continued development
+Because I set the same class for each error icon and message, if I use querySelector then it only shows the first one. Make const for currentElement instead of querySelector one class. It can work properly.
 
-Improving the javascript function to show up the rest of error-icons and error-messages.
+```js
+const invalidateElement = (element) => {
+  const currentElement = element;
+  const errorIcon = currentElement.nextElementSibling;
+  const errorMessage = currentElement.parentElement.nextElementSibling;
+
+  currentElement.classList.add("invalid");
+  errorIcon.classList.remove("hidden");
+  errorMessage.classList.remove("hidden");
+};
+```
 
 ### Useful resources
 
@@ -71,3 +82,5 @@ Pon Huang
 [Art Blog](https://une722.wordpress.com)
 
 ## Acknowledgments
+
+Thanks [Nurcholis](https://www.frontendmentor.io/solutions/signup-form-scss-L9uo8GmGaY#comment-62cd874e92ed2b163eed4ef3) Help me to solve the JS problem and icon horizontal align.

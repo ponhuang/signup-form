@@ -7,8 +7,6 @@ const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-const errorMessage = document.querySelector(".error-message");
-const errorIcon = document.querySelector(".error-icon");
 
 const input = [firstName, lastName, email, password];
 
@@ -16,13 +14,21 @@ const input = [firstName, lastName, email, password];
 let isValidationOn = false;
 
 const resetElement = (element) => {
+  const currentElement = element;
+  const errorIcon = currentElement.nextElementSibling;
+  const errorMessage = currentElement.parentElement.nextElementSibling;
+
   element.classList.remove("invalid");
   errorIcon.classList.add("hidden");
   errorMessage.classList.add("hidden");
 };
 
 const invalidateElement = (element) => {
-  element.classList.add("invalid");
+  const currentElement = element;
+  const errorIcon = currentElement.nextElementSibling;
+  const errorMessage = currentElement.parentElement.nextElementSibling;
+
+  currentElement.classList.add("invalid");
   errorIcon.classList.remove("hidden");
   errorMessage.classList.remove("hidden");
 };
